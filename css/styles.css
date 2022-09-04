@@ -161,7 +161,6 @@ button {
   background-color: var(--accent-txt-cl);
   border-radius: 2px;
 }
-
 .mail-icon,
 .tel-icon {
   fill: currentColor;
@@ -185,6 +184,7 @@ button {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/img.jpg);
   background-position: center;
+  margin: 0 auto;
 }
 .hero-title {
   width: 696px;
@@ -214,7 +214,6 @@ button {
   background-color: var(--accent-txt-cl);
 }
 /*About section*/
-
 .about-list {
   display: flex;
   gap: 30px;
@@ -456,6 +455,42 @@ address {
   line-height: 1.88;
   color: var(--main-txt-cl);
 }
+.overlay-cards-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform var(--animation);
+}
+.cards-item:hover .overlay {
+  transform: translateY(0);
+}
+.overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+
+  color: var(--light-bg-cl);
+
+  user-select: none;
+}
+
 /*Socials icons*/
 .socials {
   display: flex;
