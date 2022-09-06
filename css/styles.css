@@ -173,7 +173,7 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
-  transition: var(--animation);
+  transition: color var(--animation);
 }
 /*Hero section*/
 .hero {
@@ -322,7 +322,7 @@ button {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border-color, color var(--animation);
+  transition: border-color var(--animation), color var(--animation);
 }
 .customers-icon {
   fill: currentColor;
@@ -402,7 +402,7 @@ address {
   color: var(--light-bg-cl);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: color, background-color var(--animation);
+  transition: color var(--animation), background-color var(--animation);
 }
 .foter-socials-icon {
   fill: currentColor;
@@ -431,7 +431,7 @@ address {
   color: var(--secondary-txt-color);
   cursor: pointer;
   letter-spacing: 0.03em;
-  transition: color, background-color, box-shadow, var(--animation);
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 .projects-btn:hover,
 .projects-btn:focus {
@@ -532,7 +532,7 @@ address {
 }
 .socials-icon {
   fill: currentColor;
-  transition: color, var(--animation);
+  transition: color var(--animation);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -554,11 +554,12 @@ address {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--animation), visibility var(--animation);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -569,22 +570,20 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
-  height: 581px;
-
+  min-width: 528px;
+  min-height: 581px;
   background-color: var(--light-bg-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.3);
 }
-
 .modal-btn {
   position: absolute;
   top: 8px;
