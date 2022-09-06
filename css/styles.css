@@ -239,6 +239,9 @@ button {
 .work {
   padding-top: 0;
 }
+.work-item {
+  position: relative;
+}
 .about-svg {
   display: flex;
   align-items: center;
@@ -247,6 +250,24 @@ button {
   height: 120px;
   background-color: var(--gray-bg-cl);
   margin-bottom: 30px;
+}
+.work-img-overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 27px 10px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.work-img-overlay-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--light-bg-cl);
 }
 
 /*Team section*/
